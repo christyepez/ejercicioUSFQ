@@ -1,0 +1,23 @@
+<mat-card>
+    <span>Crear Nuevo Movimiento</span>
+    <form [formGroup]="movimientoForm" (ngSubmit) = "onSubmit()">
+        <mat-form-field class ="crear-movimiento-field">
+            <input matInput placeholder="Cuenta" formControlName="cuentaId">
+        </mat-form-field>
+        <mat-form-field class="crear-movimiento-field">
+            <input matInput placeholder="Tipo Movimiento" formControlName="tipo">
+        </mat-form-field>
+        <mat-form-field class="crear-movimiento-field">
+            <input matInput placeholder="Fecha Movimiento" formControlName="fecha">
+        </mat-form-field>
+        <mat-form-field class="crear-movimiento-field">
+            <input matInput placeholder="Valor Movimiento" formControlName="valor">
+        </mat-form-field>
+        <mat-form-field class="crear-movimiento-field">
+            <input matInput placeholder="Saldo Cuenta" formControlName="saldo">
+        </mat-form-field>
+        <button mat-raise-button [disabled] = "!movimientoForm.valid">Crear Nuevo</button>
+    </form>
+
+    
+</mat-card>

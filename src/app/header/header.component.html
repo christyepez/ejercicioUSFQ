@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+    <button mat-button routerLink='/login'>App</button>
+    <button mat-button [matMenuTriggerFor]="clienteMenu" *ngIf="auth.isAutenticado">Clientes</button>
+<mat-menu #clienteMenu="matMenu"> 
+    <button mat-menu-item routerLink='/clientes'>Cliente</button>
+    <button mat-menu-item routerLink='/crear-clientes'>Nuevo Cliente</button>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="cuentaMenu" *ngIf="auth.isAutenticado">Cuentas</button>
+<mat-menu #cuentaMenu="matMenu"> 
+    <button mat-menu-item routerLink='/cuentas'>Cuentas</button>
+    <button mat-menu-item routerLink='/crear-cuentas'>Nuevo Cuenta</button>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="moivmientoMenu" *ngIf="auth.isAutenticado">Movimientos</button>
+<mat-menu #moivmientoMenu="matMenu"> 
+    <button mat-menu-item routerLink='/movimientos'>Movimiento</button>
+    <button mat-menu-item routerLink='/crear-movimientos'>Nuevo Movimiento</button>
+</mat-menu>
+<span style="flex: 1 1 auto"></span>
+
+<button mat-button *ngIf="auth.isAutenticado">Bienvenido {{auth.getUserName}}</button>
+<button mat-button *ngIf="auth.isAutenticado" (click)="auth.logout()">Logout</button>
+<button mat-button *ngIf="!auth.isAutenticado" routerLink='/register'>Register</button>
+<button mat-button *ngIf="!auth.isAutenticado" routerLink='/login'>Login</button>
+<!-- login() -->
+
+<!-- <mat-menu #RegistrarMenu="matMenu"> 
+    <button mat-menu-item  routerLink='/register'>Nuevo usuario</button>
+
+</mat-menu>-->
+
+   <!-- <button mat-button routerLink='/clientes'>Cliente</button>
+    <button mat-button routerLink='/crear-clientes'>Nuevo Cliente</button>
+    <button mat-button routerLink='/cuentas'>Cuenta</button>
+    <button mat-button routerLink='/crear-cuentas'>Nuevo Cuenta</button>
+    <button mat-button routerLink='/movimientos'>Movimiento</button>
+    <button mat-button routerLink='/crear-movimientos'>Nuevo Movimiento</button>
+-->
+</mat-toolbar>

@@ -1,0 +1,25 @@
+<mat-card >
+    <mat-card-header>
+        <mat-card-title>Esta seguro de Eliminar?</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item>
+                <b>Cliente: {{cuenta.clienteid}}</b>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <b>Numero Cuenta: {{cuenta.numero}}</b>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <b>Saldo: {{cuenta.saldo}}</b>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-flat-button (click)= "cancel()">Cancelar</button>
+        <button mat-raised-button color='warn' (click)= "confirmar()">Confirmar</button>
+    </mat-card-actions>
+</mat-card>

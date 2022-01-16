@@ -1,0 +1,16 @@
+<mat-card>
+    <span>Crear Nuevo Cuenta</span>
+    <form [formGroup]="cuentaForm" (ngSubmit) = "onSubmit()">
+        <mat-form-field class="crear-cuenta-field">
+            <input matInput placeholder="Cliente" formControlName="clienteId">
+        </mat-form-field>
+        <mat-form-field class="crear-cuenta-field">
+            <input matInput placeholder="Numero Cuenta" formControlName="numero">
+        </mat-form-field>
+        <mat-form-field class="crear-cuenta-field">
+            <input matInput placeholder="Saldo Cuenta" formControlName="saldo">
+        </mat-form-field>
+        <button mat-raise-button [disabled] = "!cuentaForm.valid">Crear Nuevo</button>
+    </form>
+    
+</mat-card>
