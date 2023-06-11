@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "backendUSFQ.Domain/1.0.0": {
+        "dependencies": {
+          "backendUSFQ.Entity": "1.0.0"
+        },
+        "runtime": {
+          "backendUSFQ.Domain.dll": {}
+        }
+      },
+      "backendUSFQ.Entity/1.0.0": {
+        "runtime": {
+          "backendUSFQ.Entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "backendUSFQ.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "backendUSFQ.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
