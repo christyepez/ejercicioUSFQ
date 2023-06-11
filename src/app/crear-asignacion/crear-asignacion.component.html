@@ -1,0 +1,18 @@
+<mat-card>
+    <span>Crear Nuevo Asignacion</span>
+    <form [formGroup]="asignacionForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="crear-asignacion-form">
+            <input matInput placeholder="FechaRegistro" formControlName="fechaRegistro">
+        </mat-form-field>
+        <mat-form-field class="crear-asignacion-field">
+            <input matInput placeholder="Estudiante" formControlName="estudianteId">
+        </mat-form-field>
+        <mat-form-field class="crear-asignacion-field">
+            <input matInput placeholder="Curso" formControlName="cursoId">
+        </mat-form-field>
+      
+
+        <button mat-raise-button [disabled] = "!asignacionForm.valid">Crear Nuevo</button>
+    </form>
+   
+</mat-card>

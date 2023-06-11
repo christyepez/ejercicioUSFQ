@@ -1,31 +1,40 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-import { ClientesComponent } from "./clientes/clientes.component";
-import { CrearClienteComponent } from "./crear-cliente/crear-cliente.component";
-import { CrearCuentaComponent } from "./crear-cuenta/crear-cuenta.component";
-import { CrearMovimientoComponent } from "./crear-movimiento/crear-movimiento.component";
-import { CuentasComponent } from "./cuentas/cuentas.component"; 
-import { DeleteClienteComponent } from "./delete-cliente/delete-cliente.component";
-import { DeleteCuentaComponent } from "./delete-cuenta/delete-cuenta.component";
-import { DeleteMovimientoComponent } from "./delete-movimiento/delete-movimiento.component";
-import { LoginComponent } from "./login/login.component";
-import { MovimientosComponent } from "./movimientos/movimientos.component";
+import { RouterModule, Routes } from "@angular/router";  
+import { LoginComponent } from "./login/login.component"; 
 import { RegisterComponent } from "./register/register.component";
+
+import {EstudianteComponent} from './estudiante/estudiante.component';
+import { DeleteEstudianteComponent } from './delete-estudiante/delete-estudiante.component';
+import { CrearEstudianteComponent } from './crear-estudiante/crear-estudiante.component';
+
+import {CursoComponent} from './curso/curso.component';
+import { DeleteCursoComponent } from './delete-curso/delete-curso.component';
+import { CrearCursoComponent } from './crear-curso/crear-curso.component';
+
+import {AsignacionComponent} from './asignacion/asignacion.component';
+import { DeleteAsignacionComponent } from './delete-asignacion/delete-asignacion.component';
+import { CrearAsignacionComponent } from './crear-asignacion/crear-asignacion.component';
+
+
 
 const routes:Routes=[
 
     {path:'', component: LoginComponent},
-    {path:'clientes', component: ClientesComponent},
-    {path:'crear-clientes', component: CrearClienteComponent},
-    {path:'clientes/delete-cliente/:id', component: DeleteClienteComponent},
 
-    {path:'cuentas', component: CuentasComponent},
-    {path:'crear-cuentas', component: CrearCuentaComponent},
-    {path:'cuentas/delete-cuenta/:id', component: DeleteCuentaComponent},
 
-    {path:'movimientos', component: MovimientosComponent},
-    {path:'crear-movimientos', component: CrearMovimientoComponent},
-    {path:'movimientos/delete-movimiento/:id', component: DeleteMovimientoComponent},
+    {path:'estudiantes', component: EstudianteComponent},
+    {path:'crear-estudiantes', component: CrearEstudianteComponent},
+    {path:'estudiantes/delete-estudiante/:id', component: DeleteEstudianteComponent},
+
+    {path:'cursos', component: CursoComponent},
+    {path:'crear-cursos', component: CrearCursoComponent},
+    {path:'cursos/delete-curso/:id', component: DeleteCursoComponent},
+
+    {path:'asignacion', component: AsignacionComponent},
+    {path:'crear-asignaciones', component: CrearAsignacionComponent},
+    {path:'asignacion/delete-asignacion/:id', component: DeleteAsignacionComponent},
+      
+
     {path: 'register', component: RegisterComponent},
     {path: 'login', component: LoginComponent}
 ]

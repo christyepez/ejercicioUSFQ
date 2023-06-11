@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -33,7 +33,8 @@ export class RegisterComponent implements OnInit {
       localStorage.setItem('userName',data.result.userName);
       localStorage.setItem('token_value',data.result.token);
       alert(data.displayMessage);
-      this.router.navigate(['/clientes']);
+      this.router.navigate(['/estudiantes']);
+      //this.router.navigate(['/clientes']);
     })
 
   }

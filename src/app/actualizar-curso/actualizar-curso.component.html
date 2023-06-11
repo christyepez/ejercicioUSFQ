@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Actualizar Curso</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="crear-curso-form">
+        <input matInput placeholder="Nombre Curso" formControlName="nombreCurso">
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="crear-curso-field">
+        <input matInput placeholder="Hora inicio" formControlName="horaInicio">
+    </mat-form-field>
+     
+ 
+    <br/>
+    <mat-form-field class="crear-curso-field">
+        <input matInput placeholder="Hora final" formControlName="horaFinal">
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="crear-curso-field">
+        <input matInput placeholder="Numero creditos" formControlName="numeroCreditos">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+<button class="mat-raised-button" (click)="cerrar()">Cerrar</button>
+<button class="mat-raised-button mat-primary" (click)="guardar()">Grabar</button>
+</mat-dialog-actions>

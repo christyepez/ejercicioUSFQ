@@ -1,0 +1,19 @@
+<mat-card>
+    <span>Crear Nuevo Estudiante</span>
+    <form [formGroup]="estudianteForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="crear-estudiante-form">
+            <input matInput placeholder="Cedula" formControlName="cedula">
+        </mat-form-field>
+        <mat-form-field class="crear-estudiante-field">
+            <input matInput placeholder="Nombres" formControlName="nombre">
+        </mat-form-field>
+        <mat-form-field class="crear-estudiante-field">
+            <input matInput placeholder="Apellido" formControlName="apellido">
+        </mat-form-field>
+        <mat-form-field class="crear-estudiante-field">
+            <input matInput placeholder="Edad" formControlName="edad">
+        </mat-form-field>
+        <button mat-raise-button [disabled] = "!estudianteForm.valid">Crear Nuevo</button>
+    </form>
+   
+</mat-card>

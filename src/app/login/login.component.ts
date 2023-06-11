@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +22,7 @@ loginData= {
     this.service.login(this.loginData).subscribe((data: any) => {
       localStorage.setItem('userName',data.result.userName);
       localStorage.setItem('token_value',data.result.token);
-      this.route.navigate(['/clientes'])
+      this.route.navigate(['/estudiantes'])
     },
     (errorData)=> alert(errorData.error.displayMessage)
     );

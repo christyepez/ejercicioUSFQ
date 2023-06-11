@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Actualizar Asignacion</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="crear-asignacion-form">
+        <input matInput placeholder="fecha Registro" formControlName="fechaRegistro">
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="crear-asignacion-field">
+        <input matInput placeholder="Estudiante" formControlName="estudianteId">
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="crear-asignacion-field">
+        <input matInput placeholder="Curso" formControlName="cursoId">
+    </mat-form-field>
+   
+
+</mat-dialog-content>
+<mat-dialog-actions>
+<button class="mat-raised-button" (click)="cerrar()">Cerrar</button>
+<button class="mat-raised-button mat-primary" (click)="guardar()">Grabar</button>
+</mat-dialog-actions>

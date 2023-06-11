@@ -1,0 +1,21 @@
+<mat-card>
+    <span>Crear Nuevo Cursos</span>
+    <form [formGroup]="cursoForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="crear-curso-form">
+            <input matInput placeholder="nombreCurso" formControlName="nombreCurso">
+        </mat-form-field>
+        <mat-form-field class="crear-curso-field">
+            <input matInput placeholder="horaInicio" formControlName="horaInicio">
+        </mat-form-field>
+
+   
+        <mat-form-field class="crear-curso-field">
+            <input matInput placeholder="horaFinal" formControlName="horaFinal">
+        </mat-form-field>
+        <mat-form-field class="crear-curso-field">
+            <input matInput placeholder="numeroCreditos" formControlName="numeroCreditos">
+        </mat-form-field>
+        <button mat-raise-button [disabled] = "!cursoForm.valid">Crear Nuevo</button>
+    </form>
+   
+</mat-card>
